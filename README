@@ -1,0 +1,18 @@
+### Overview
+The Stock Market Predictor is a machine learning model that follows and predicts the S&P 500 index. It uses Random Forest Classifier method to train the model.
+In this project, I exercised backtesting to improve model predictions. 
+
+### Procedure
+I started by extracting the S&P 500 data from the Yahoo Finance API, cleaned the data, then displayed it using Matplotlib library.
+
+After splitting the data, I trained the model and made predictions. I compared the predictions with the actual target result and displayed the graph
+
+Next, I created a backtest function that would train the first 10 years initially and then test the next year. Each iteration in the backtest function uses a bigger training window. The accuracy of this was recorded as a 52.56%
+
+To improve the model, I created new x-axis variables based on rolling averages and trends. The rolling windows are 2 days, 5 days, 3 months, 1 year, and 4 years. With these windows, the ratio of current close price to the rolling average close price and the trend (or momentum) of each window. The model was then retrained and the accuracy was recorded as 57.42% which is a nice bump from 52.56%
+
+### Author
+Diego Garcia
+
+
+
